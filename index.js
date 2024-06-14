@@ -8,11 +8,18 @@ let tasksList = []
 
 function renderList(){
     taskListEl.innerHTML = ""
-    for (let i =0;i<=tasksList.length-1;i++){
-    let newTask = document.createElement('li') //<li></li>
-    newTask.innerText = tasksList[i] // <li>tdu</li>
-    taskListEl.appendChild(newTask)// ol --> li
-   }
+    
+//     for (let i =0;i<=tasksList.length-1;i++){
+//     let newTask = document.createElement('li') //<li></li>
+//     newTask.innerText = tasksList[i] // <li>tdu</li>
+//     taskListEl.appendChild(newTask)// ol --> li
+//    }
+
+    tasksList.map((value)=>{
+        let newTask = document.createElement('li')
+        newTask.innerText = value;
+        taskListEl.appendChild(newTask)
+    })
 
 }
 
